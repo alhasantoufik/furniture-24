@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\HomeController as BackendHomeController;
+use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,11 @@ Route::post('/category-store',[CategoryController::class,'categoryStore'])->name
 
 Route::get ('/category/edit/{edit_id}',[CategoryController::class,'editList'])->name('category.edit');
 Route::get ('/category/delete/{delete_id}',[CategoryController::class,'deleteList'])->name('category.delete');
+
+
+//products
+
+Route::get('/product-list',[ProductController::class,'productList'])->name('product.list');
+Route::get('/product-form',[ProductController::class,'productForm'])->name('product.form');
+Route::post('/product-store',[ProductController::class,'productStore'])->name('product.store');
 

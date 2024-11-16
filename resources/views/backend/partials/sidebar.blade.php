@@ -24,9 +24,9 @@
                                 Customer
                                 
                             </a>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                              Products
+                            <a class="nav-link" href="{{route('product.list')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Products
                                 
                             </a>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
