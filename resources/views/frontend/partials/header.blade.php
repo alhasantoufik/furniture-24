@@ -12,7 +12,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li><a class="nav-link" href="shop.html">Products</a></li>
+            <li><a class="nav-link" href="{{route('product.show')}}">Products</a></li>
             <li><a class="nav-link" href="about.html">Store Location</a></li>
             <li><a class="nav-link" href="services.html">News and Events</a></li>
             <li><a class="nav-link" href="blog.html">About Us</a></li>

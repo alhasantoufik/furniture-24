@@ -1,25 +1,31 @@
 <?php
 
+use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\HomeController as BackendHomeController;
 use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use Illuminate\Support\Facades\Route;
 
 //frontend routes
 Route::get('/',[HomeController::class,'home'])->name('frontend.home');
 
+//products
+Route::get('/product-show',[FrontendProductController::class,'productShow'])->name('product.show');
 
 
 
 
 
+Route::group(['prefix'=> 'admin'], function () {
 
-
-
+    Route::get('/login',[AdminController::class,'adminLogin'])->name('login');
+    Route::post('/do-login',[AdminController::class,'adminDoLogin'])->name('do.login');
 //backend routes
-Route::get('/home',[BackendHomeController::class,'home'])->name('admin.home');
+Route::get('/',[BackendHomeController::class,'home'])->name('admin.home');
 
+Route::get('/logOut',[AdminController::class,'adminLogout'])->name('admin.logout');
 
 
 //category
@@ -37,3 +43,4 @@ Route::get('/product-list',[ProductController::class,'productList'])->name('prod
 Route::get('/product-form',[ProductController::class,'productForm'])->name('product.form');
 Route::post('/product-store',[ProductController::class,'productStore'])->name('product.store');
 
+});

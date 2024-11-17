@@ -15,7 +15,7 @@
 <div class="container">
     <div class="card mt-5">
         <h3 class="card-header p-3">
-           <a href="#">
+           <a href="{{route('product.form')}}">
            <button class="btn btn-info">Add Product</button>
            </a>
         </h3>

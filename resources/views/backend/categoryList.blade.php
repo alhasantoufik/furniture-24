@@ -20,7 +20,7 @@
   <tbody>
    @foreach ($categories as $key=>$item)
    <tr>
-      <th scope="row">{{$item->$key+1}}</th>
+      <th scope="row">{{$key+1}}</th>
       <td>{{$item->name}}</td>
       <td>{{$item->description}}</td>
       <td>{{$item->status}}</td>
