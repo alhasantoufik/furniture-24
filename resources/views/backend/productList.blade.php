@@ -26,6 +26,7 @@
                         <th>Id</th>
                         <th>Name</th>
                         <th>Description</th>
+                        <th>Image</th>
                         <th>Price</th>
                         <th>Stock</th>
                         <th>Category Name</th>
@@ -52,6 +53,7 @@
             {data: 'id', name: 'Id'},
             {data: 'name', name: 'Name'},
             {data: 'description', name: 'Description'},
+            {data: 'image', name: 'image', orderable: false, searchable: false}, 
             {data: 'price', name: 'Price'},
             {data: 'stock_quantity', name: 'Stock'},
             {data: 'category_id', name: 'Category Name'},

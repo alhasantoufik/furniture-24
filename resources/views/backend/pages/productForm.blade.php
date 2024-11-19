@@ -29,9 +29,13 @@
   </div>
 
   <div data-mdb-input-init class="form-outline mb-4">
-  <label class="form-label" for="form6Example3">Product Stock</label>
+    <label class="form-label" for="form6Example3">Product Stock</label>
     <input name="product_stock" type="text" id="form6Example3" class="form-control" />
-   
+  </div>
+
+  <div data-mdb-input-init class="form-outline mb-4">
+    <label class="form-label">Product Image</label>
+    <input name="image" type="file" class="form-control" />
   </div>
 
   <!-- Text input -->

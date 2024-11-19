@@ -64,6 +64,12 @@
                                 Review & Ratings
                                 
                             </a>
+
+                            <a class="nav-link" href="{{route('admin.logout')}}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Log Out
+                                
+                            </a>
                            
                            
                         </div>

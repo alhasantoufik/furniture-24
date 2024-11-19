@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Route;
 
 //frontend routes
 Route::get('/',[HomeController::class,'home'])->name('frontend.home');
+Route::get('/category-show/{category_id}',[HomeController::class,'showCategory'])->name('show.category');
+
+
+
 
 //products
 Route::get('/product-show',[FrontendProductController::class,'productShow'])->name('product.show');
@@ -42,5 +46,11 @@ Route::get ('/category/delete/{delete_id}',[CategoryController::class,'deleteLis
 Route::get('/product-list',[ProductController::class,'productList'])->name('product.list');
 Route::get('/product-form',[ProductController::class,'productForm'])->name('product.form');
 Route::post('/product-store',[ProductController::class,'productStore'])->name('product.store');
+
+
+
+
+
+
 
 });

@@ -10,8 +10,44 @@
     <div class="collapse navbar-collapse" id="navbarsFurni">
         <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="{{route('frontend.home')}}">Home</a>
             </li>
+
+
+            <!-- category dropdown -->
+            <style>
+                    .navbar-expand-md .navbar-nav .dropdown-menu {
+        position: absolute;
+        background-color: black;
+    }
+
+            </style>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Category
+                </button>
+            <ul class="dropdown-menu">
+
+            @foreach ($category as $item)
+            
+            <li><a class="dropdown-item" href="{{route('show.category',$item->id)}}">{{$item->name}}</a></li>
+            
+            @endforeach
+            </ul>
+            </div>
+
+            
+
+            <!-- category dropdown end -->
+
+
+
+
+
+
+
+
+
             <li><a class="nav-link" href="{{route('product.show')}}">Products</a></li>
             <li><a class="nav-link" href="about.html">Store Location</a></li>
             <li><a class="nav-link" href="services.html">News and Events</a></li>

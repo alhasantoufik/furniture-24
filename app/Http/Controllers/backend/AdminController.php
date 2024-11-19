@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Redirect;
 
 class AdminController extends Controller
 {
@@ -34,6 +36,9 @@ class AdminController extends Controller
     public function adminLogout()
     {
         Auth::logout();
+
+        notify()->success('Sign Out successful');
+        return redirect()->route('login');
     }
 
 
