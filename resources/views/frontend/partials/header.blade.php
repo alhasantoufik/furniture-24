@@ -15,28 +15,20 @@
 
 
             <!-- category dropdown -->
-            <style>
-                    .navbar-expand-md .navbar-nav .dropdown-menu {
-        position: absolute;
-        background-color: black;
-    }
+           
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Category
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                      @foreach ($categories as $item)
+                      
+                      <li><a style="background-color:black" class="dropdown-item" href="{{route('product.show')}}">{{$item->name}}</a></li>
 
-            </style>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                     Category
-                </button>
-            <ul class="dropdown-menu">
-
-            @foreach ($category as $item)
+                      @endforeach
             
-            <li><a class="dropdown-item" href="{{route('show.category',$item->id)}}">{{$item->name}}</a></li>
-            
-            @endforeach
-            </ul>
-            </div>
-
-            
+                    </ul>
+                </li>
 
             <!-- category dropdown end -->
 
@@ -56,10 +48,33 @@
         </ul>
 
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-            <li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-            <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="{{route('customer.profile')}}"><img src="images/user.svg"></a>
+        </li>
+        
+        <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Login
+                    </a>
+                <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                      
+                      
+                      <li><a style="background-color:black" class="dropdown-item" href="#">Registration</a></li>
+
+                    
+            
+                </ul>
+            </li>
         </ul>
     </div>
+
+
+    <!-- registration -->
+     
+
+
 </div>
     
 </nav>

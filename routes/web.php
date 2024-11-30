@@ -4,6 +4,7 @@ use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\backend\HomeController as BackendHomeController;
 use App\Http\Controllers\backend\ProductController;
+use App\Http\Controllers\frontend\CustomerController as FrontendCustomerController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use Illuminate\Support\Facades\Route;
@@ -12,11 +13,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'home'])->name('frontend.home');
 Route::get('/category-show/{category_id}',[HomeController::class,'showCategory'])->name('show.category');
 
+//customer profile
+Route::get('/customer-Profile',[FrontendCustomerController::class,'customerProfile'])->name('customer.profile');
+Route::get('/login',[FrontendCustomerController::class,'login'])->name('customer.login');
+Route::get('/register',[FrontendCustomerController::class,'registration'])->name('customer.registration');
+
 
 
 
 //products
 Route::get('/product-show',[FrontendProductController::class,'productShow'])->name('product.show');
+Route::get('/product-by-category',[FrontendProductController::class,'productByCategory'])->name('product.category');
 
 
 
